@@ -1,6 +1,5 @@
 <script setup>
 import logo from '@/assets/img/logo.png'
-// import Nav from './Nav.vue'
 </script>
 
 <template>
@@ -37,6 +36,16 @@ import logo from '@/assets/img/logo.png'
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-uppercase" href="#">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="#">
+                                    <font-awesome-icon :icon="['fab', 'facebook-f']" class="fa-xl text-black mx-2" />
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="#">
+                                    <font-awesome-icon :icon="['fab', 'instagram']" class="fa-xl text-black mx-2" />
+                                </a>
                             </li>
                         </ul>
                     </div>

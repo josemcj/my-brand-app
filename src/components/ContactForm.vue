@@ -8,7 +8,7 @@ import contactoImg from '@/assets/img/contacto.png'
             <div class="col-12 col-md-6 d-flex align-items-center justify-content-end p-0">
                 <img :src="contactoImg" class="img-fluid" alt="Imagen de contacto" />
             </div>
-            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center border p-0">
+            <div class="col-12 col-md-6 d-flex align-items-center justify-content-center border p-3">
                 <form class="w-75">
                     <div class="mb-4">
                         <label for="name" class="form-label">Nombre</label>
