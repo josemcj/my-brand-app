@@ -7,7 +7,7 @@ import logo from '@/assets/img/logo.png'
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <img :src="logo" alt="Logo de la empresa" width="180px" />
                     </a>
 
@@ -29,13 +29,13 @@ import logo from '@/assets/img/logo.png'
                                 <a class="nav-link active text-uppercase" aria-current="page" href="#">Qué hacemos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-uppercase" href="#">Por qué My Brand</a>
+                                <a class="nav-link text-uppercase" href="#por-que-my-brand">Por qué My Brand</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-uppercase" href="#">Nosotros</a>
+                                <a class="nav-link text-uppercase" href="#nosotros">Nosotros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-uppercase" href="#">Contacto</a>
+                                <a class="nav-link text-uppercase" href="#contacto">Contacto</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-uppercase" href="#">

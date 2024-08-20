@@ -3,7 +3,7 @@ import todo from '@/assets/img/todo.png'
 </script>
 
 <template>
-    <section class="py-5">
+    <section class="py-5" id="por-que-my-brand">
         <div class="container">
             <h2 class="text-center">Sabemos justo lo que tu MARCA necesita para atraer clientes potenciales</h2>
         </div>

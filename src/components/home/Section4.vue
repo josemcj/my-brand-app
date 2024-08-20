@@ -3,10 +3,10 @@ import lightbulbDesigns from '@/assets/img/lightbulb-designs.png'
 </script>
 
 <template>
-    <section class="py-5 bg-black">
+    <section class="py-5 bg-black" id="nosotros">
         <div class="container">
             <div class="row d-flex align-items-center">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 text-container">
                     <h2 class="text-uppercase fw-bold text-white mb-5">Nosotros</h2>
 
                     <p class="text-white fs-5 mb-4">
@@ -42,7 +42,15 @@ import lightbulbDesigns from '@/assets/img/lightbulb-designs.png'
 </template>
 
 <style lang="scss" scoped>
+.text-container {
+    margin-bottom: 3rem;
+
+    @media (min-width: 768px) {
+        margin-top: 0;
+    }
+}
+
 img {
-    max-height: 30rem;
+    max-height: 25rem;
 }
 </style>

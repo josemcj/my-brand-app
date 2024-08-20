@@ -15,7 +15,7 @@ import megaB from '@/assets/img/mega-iconB.svg'
                     </p>
                 </div>
                 <div class="col-lg-6 text-end">
-                    <img :src="megaB" alt="Logo mybrand" class="img-fluid" style="max-width: 400px" />
+                    <img :src="megaB" alt="Logo mybrand" class="img-fluid d-none d-md-block" style="max-width: 400px" />
                 </div>
             </div>
         </div>
