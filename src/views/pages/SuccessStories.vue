@@ -14,7 +14,9 @@ const title = ref('Abosolook')
     <div class="mt-5 py-5 background-plus">
         <div class="container">
             <div class="text-uppercase">
-                <span>Inicio</span>
+                <a href="/" class="link-offset-2 link-underline link-underline-opacity-0 text-dark">
+                    <span>Inicio</span>
+                </a>
                 >
                 <span>Casos de éxito</span>
             </div>
