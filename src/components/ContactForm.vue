@@ -12,19 +12,31 @@ import contactoImg from '@/assets/img/contacto.png'
                 <form class="w-75">
                     <div class="mb-4">
                         <label for="name" class="form-label">Nombre</label>
-                        <input type="text" class="form-control bg-light" id="name" placeholder="Nombre" />
+                        <input type="text" class="form-control bg-secondary-subtle" id="name" />
                     </div>
                     <div class="mb-4">
                         <label for="email" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control bg-light" id="email" placeholder="Correo electrónico" />
+                        <input type="email" class="form-control bg-secondary-subtle" id="email" />
                     </div>
                     <div class="mb-4">
                         <label for="message" class="form-label">Mensaje</label>
-                        <textarea class="form-control bg-light" id="message" rows="4" placeholder="Mensaje"></textarea>
+                        <textarea class="form-control bg-secondary-subtle" id="message" rows="4"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-outline-dark">Enviar</button>
+                    <button type="submit" class="btn btn-outline-dark text-uppercase btn-submit">Enviar</button>
                 </form>
             </div>
         </div>
     </div>
 </template>
+
+<style scoped>
+input,
+textarea {
+    border: none;
+}
+
+.btn-submit {
+    border-radius: 0;
+    padding: 0.5rem 3rem;
+}
+</style>
