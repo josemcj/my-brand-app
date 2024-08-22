@@ -1,11 +1,15 @@
 <script setup>
+import { inject } from 'vue'
 import { useAuthStore } from '@/stores/useAuthStore'
 import logo from '@/assets/img/logo.png'
 
 const auth = useAuthStore()
+const $loading = inject('$loading')
 
 const logout = async () => {
+    const loader = $loading.show()
     await auth.logout()
+    loader.hide()
 }
 </script>
 

@@ -1,11 +1,12 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/useAuthStore'
 import Alert from '@/components/Alert.vue'
 
 const router = useRouter()
 const auth = useAuthStore()
+const $loading = inject('$loading')
 
 const alert = ref({
     show: false,
@@ -19,7 +20,9 @@ const form = ref({
 })
 
 const onSubmit = async () => {
+    const loader = $loading.show()
     await auth.login(form.value)
+    loader.hide()
 
     if (auth.isLoggedUser()) {
         router.push('/admin')
