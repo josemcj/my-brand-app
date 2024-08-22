@@ -1,8 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { inject, ref, onMounted } from 'vue'
 import { useDates } from '@/composables/useDates'
-import { BModal } from 'bootstrap-vue-next'
 import ContactAPI from '@/api/Contact'
+
+const $loading = inject('$loading')
 
 const contactData = ref([])
 const isLoading = ref(false)
@@ -44,7 +45,9 @@ const form = ref({
 })
 
 const getContactData = async () => {
+    const loader = $loading.show()
     contactData.value = await ContactAPI.list()
+    loader.hide()
 }
 
 const handleUpdate = (item) => {

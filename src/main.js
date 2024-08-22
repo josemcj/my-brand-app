@@ -3,6 +3,8 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import { LoadingPlugin } from 'vue-loading-overlay'
+import 'vue-loading-overlay/dist/css/index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
 import * as BootstrapVueNext from 'bootstrap-vue-next'
@@ -19,15 +21,11 @@ const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 
-// Object.values(BootstrapVueNext).forEach((component) => {
-//     app.component(component.name, component)
-// })
-
 for (const componentKey in BootstrapVueNext) {
     app.component(componentKey, BootstrapVueNext[componentKey])
 }
 
 app.use(router)
-// app.use(BootstrapVueNext)
+app.use(LoadingPlugin)
 
 app.mount('#app')

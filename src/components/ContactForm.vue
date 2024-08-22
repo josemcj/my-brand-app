@@ -1,7 +1,8 @@
 <script setup>
-import { ref, watch } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import { useCleanObject } from '@/composables/useCleanObject'
 import ContactAPI from '@/api/Contact'
+import IpAPI from '@/api/IP'
 import Alert from '@/components/Alert.vue'
 import contactoImg from '@/assets/img/contacto.png'
 
@@ -20,6 +21,10 @@ const form = ref({
     ip: '192.158.214.5',
 })
 
+const fetchIpAddress = async () => {
+    form.value.ip = await IpAPI.getIpAddress()
+}
+
 const onSubmit = async () => {
     isLoading.value = true
     const response = await ContactAPI.store(form.value)
@@ -34,6 +39,10 @@ const onSubmit = async () => {
 
     isLoading.value = false
 }
+
+onMounted(() => {
+    fetchIpAddress()
+})
 </script>
 
 <template>
