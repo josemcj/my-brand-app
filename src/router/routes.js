@@ -13,10 +13,11 @@ export default [
         path: '/admin',
         name: 'admin',
         component: () => import('@/views/pages/admin/index.vue'),
+        meta: { requiresAuth: true },
     },
     {
         path: '/login',
         name: 'login',
         component: () => import('@/views/pages/auth/index.vue'),
     },
-    ]
+]
