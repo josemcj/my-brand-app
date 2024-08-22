@@ -48,5 +48,11 @@ npm run dev
 npm run build
 ```
 
+## Credenciales de acceso
+
+-   **Email:** `test@mail.com`
+-   **Contraseña:** `123456`
+
 ## Back end del proyecto
+
 https://github.com/josemcj/my-brand-backend
