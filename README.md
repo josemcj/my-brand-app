@@ -47,3 +47,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Back end del proyecto
+https://github.com/josemcj/my-brand-backend
