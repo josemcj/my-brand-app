@@ -1,5 +1,16 @@
 <script setup>
+import { inject } from 'vue'
+import { useAuthStore } from '@/stores/useAuthStore'
 import logo from '@/assets/img/logo.png'
+
+const auth = useAuthStore()
+const $loading = inject('$loading')
+
+const logout = async () => {
+    const loader = $loading.show()
+    await auth.logout()
+    loader.hide()
+}
 </script>
 
 <template>
@@ -46,6 +57,15 @@ import logo from '@/assets/img/logo.png'
                                 <a class="nav-link text-uppercase" href="#">
                                     <font-awesome-icon :icon="['fab', 'instagram']" class="fa-xl text-black mx-2" />
                                 </a>
+                            </li>
+                            <li v-if="auth.isLoggedUser()" class="nav-item">
+                                <button class="btn btn-outline" @click="logout">
+                                    Cerrar sesión
+                                    <font-awesome-icon
+                                        :icon="['fas', 'right-from-bracket']"
+                                        class="fa-xl text-black ms-2"
+                                    />
+                                </button>
                             </li>
                         </ul>
                     </div>

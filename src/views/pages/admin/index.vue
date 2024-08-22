@@ -2,6 +2,8 @@
 import { inject, ref, onMounted } from 'vue'
 import { useDates } from '@/composables/useDates'
 import ContactAPI from '@/api/Contact'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 const $loading = inject('$loading')
 
@@ -78,6 +80,8 @@ onMounted(() => {
 </script>
 
 <template>
+    <Header />
+
     <div class="container my-5">
         <h1>Administra los datos de contacto</h1>
 
@@ -143,4 +147,6 @@ onMounted(() => {
             </b-table>
         </div>
     </div>
+
+    <Footer />
 </template>

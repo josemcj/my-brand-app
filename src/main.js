@@ -1,6 +1,7 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import { LoadingPlugin } from 'vue-loading-overlay'
@@ -17,6 +18,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 
 library.add(fas, far, fab)
 
+const pinia = createPinia()
 const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
@@ -26,6 +28,7 @@ for (const componentKey in BootstrapVueNext) {
 }
 
 app.use(router)
+app.use(pinia)
 app.use(LoadingPlugin)
 
 app.mount('#app')
