@@ -15,8 +15,8 @@ const alert = ref({
 })
 
 const form = ref({
-    email: '',
-    password: '',
+    email: 'test@mail.com',
+    password: '123456',
 })
 
 const onSubmit = async () => {
@@ -40,7 +40,7 @@ const onSubmit = async () => {
             <h2 class="fw-bolder mb-3">My Brand</h2>
             <p class="text-secondary">Iniciar sesión</p>
 
-            <form @submit.prevent="onSubmit" id="login-form" class="w-100 my-4">
+            <form @submit.prevent="onSubmit" id="login-form" class="w-100 my-2">
                 <Alert v-if="alert.show" :alertClass="alert.className" :message="alert.message" />
 
                 <div class="form-floating mb-3">
