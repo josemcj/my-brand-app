@@ -1,5 +1,12 @@
 <script setup>
+import { useAuthStore } from '@/stores/useAuthStore'
 import logo from '@/assets/img/logo.png'
+
+const auth = useAuthStore()
+
+const logout = async () => {
+    await auth.logout()
+}
 </script>
 
 <template>
@@ -46,6 +53,15 @@ import logo from '@/assets/img/logo.png'
                                 <a class="nav-link text-uppercase" href="#">
                                     <font-awesome-icon :icon="['fab', 'instagram']" class="fa-xl text-black mx-2" />
                                 </a>
+                            </li>
+                            <li v-if="auth.isLoggedUser()" class="nav-item">
+                                <button class="btn btn-outline" @click="logout">
+                                    Cerrar sesión
+                                    <font-awesome-icon
+                                        :icon="['fas', 'right-from-bracket']"
+                                        class="fa-xl text-black ms-2"
+                                    />
+                                </button>
                             </li>
                         </ul>
                     </div>

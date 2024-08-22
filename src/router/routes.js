@@ -19,4 +19,4 @@ export default [
         name: 'login',
         component: () => import('@/views/pages/auth/index.vue'),
     },
-]
+    ]

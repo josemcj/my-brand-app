@@ -1,11 +1,34 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useAuthStore } from '@/stores/useAuthStore'
+import Alert from '@/components/Alert.vue'
+
+const router = useRouter()
+const auth = useAuthStore()
+
+const alert = ref({
+    show: false,
+    className: '',
+    message: '',
+})
 
 const form = ref({
     email: '',
     password: '',
-    password_confirmation: '',
 })
+
+const onSubmit = async () => {
+    await auth.login(form.value)
+
+    if (auth.isLoggedUser()) {
+        router.push('/admin')
+    } else {
+        alert.value.show = true
+        alert.value.className = 'alert-danger w-100'
+        alert.value.message = auth.error()
+    }
+}
 </script>
 
 <template>
@@ -14,10 +37,19 @@ const form = ref({
             <h2 class="fw-bolder mb-3">My Brand</h2>
             <p class="text-secondary">Iniciar sesión</p>
 
-            <form id="login-form" class="w-100 my-4">
+            <form @submit.prevent="onSubmit" id="login-form" class="w-100 my-4">
+                <Alert v-if="alert.show" :alertClass="alert.className" :message="alert.message" />
+
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="login-usuario" name="Usuario" placeholder="Usuario" />
-                    <label for="login-usuario">Usuario</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="login-usuario"
+                        name="Email"
+                        placeholder="Email"
+                        v-model="form.email"
+                    />
+                    <label for="login-usuario">Email</label>
                 </div>
                 <div class="input-group mb-3">
                     <div class="form-floating flex-grow-1">
@@ -27,6 +59,7 @@ const form = ref({
                             id="login-password"
                             name="Password"
                             placeholder="Contraseña"
+                            v-model="form.password"
                         />
                         <label for="login-password">Contraseña</label>
                     </div>
