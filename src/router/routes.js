@@ -14,4 +14,9 @@ export default [
         name: 'admin',
         component: () => import('@/views/pages/admin/index.vue'),
     },
+    {
+        path: '/login',
+        name: 'login',
+        component: () => import('@/views/pages/auth/index.vue'),
+    },
 ]
