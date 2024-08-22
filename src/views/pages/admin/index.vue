@@ -40,7 +40,7 @@ const form = ref({
     name: '',
     email: '',
     message: '',
-    ip: '192.158',
+    ip: '192.158.214.5',
 })
 
 const getContactData = async () => {
@@ -61,7 +61,6 @@ const handleDelete = async (item) => {
 }
 
 const onSubmit = async () => {
-    console.log(form.value)
     isLoading.value = true
     const response = await ContactAPI.update(form.value.id, form.value)
     isLoading.value = false
