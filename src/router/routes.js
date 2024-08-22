@@ -9,4 +9,9 @@ export default [
         name: 'successStories',
         component: () => import('@/views/pages/SuccessStories.vue'),
     },
+    {
+        path: '/admin',
+        name: 'admin',
+        component: () => import('@/views/pages/admin/index.vue'),
+    },
 ]

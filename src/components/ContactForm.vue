@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useCleanObject } from '@/composables/useCleanObject'
-import ContactAPI from '@/api/Contact.js'
+import ContactAPI from '@/api/Contact'
 import Alert from '@/components/Alert.vue'
 import contactoImg from '@/assets/img/contacto.png'
 

@@ -3,8 +3,8 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap'
 import * as BootstrapVueNext from 'bootstrap-vue-next'
 import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -19,11 +19,15 @@ const app = createApp(App)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 
+// Object.values(BootstrapVueNext).forEach((component) => {
+//     app.component(component.name, component)
+// })
+
 for (const componentKey in BootstrapVueNext) {
     app.component(componentKey, BootstrapVueNext[componentKey])
 }
 
 app.use(router)
-app.use(BootstrapVueNext)
+// app.use(BootstrapVueNext)
 
 app.mount('#app')
