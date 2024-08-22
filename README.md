@@ -1,28 +1,48 @@
 # my-brand-app
 
-This template should help get you started developing with Vue 3 in Vite.
+Front End realizado en Vue.js 3.
 
-## Recommended IDE Setup
+## Configuración del proyecto
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+1. Primero, clona el proyecto
 
-## Customize configuration
+Con HTTPS:
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+```sh
+git clone https://github.com/josemcj/my-brand-app.git
+```
 
-## Project Setup
+Con SSH:
+
+```sh
+git git@github.com:josemcj/my-brand-app.git
+```
+
+2. Abre la carpeta raíz del proyecto
+
+```sh
+cd my-brand-app
+```
+
+3. Copia el archivo `.env.example` y modificalo en caso de ser necesario
+
+```sh
+cp .env.example .env
+```
+
+4. Instala las dependencias
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+5. Ejecuta el proyecto
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+6. Compila y minifica para producción
 
 ```sh
 npm run build
