@@ -53,6 +53,13 @@ npm run build
 -   **Email:** `test@mail.com`
 -   **Contraseña:** `123456`
 
+## Rutas de acceso
+
+-   /
+-   /casos-de-exito
+-   /login
+-   /admin (protegida por autenticación)
+
 ## Back end del proyecto
 
 https://github.com/josemcj/my-brand-backend
