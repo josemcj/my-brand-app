@@ -51,8 +51,8 @@ import img6 from '@/assets/img/abosolook/abosolook_6.png'
 
 <style scoped>
 .images,
-.images > .row,
-.images > .col {
+.row,
+.col {
     margin: 0 !important;
     padding: 0 !important;
 }
