@@ -8,9 +8,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    const authStore = useAuthStore()
-
-    if (to.meta.requiresAuth && !authStore.isLoggedUser()) {
+    if (to.meta.requiresAuth && !localStorage.getItem('token')) {
         next({ name: 'login' })
     } else {
         next()
